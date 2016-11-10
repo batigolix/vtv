@@ -19,6 +19,7 @@ web/web.config
 
 # Drupal's file directory
 web/sites/*/files
+web/sites/*/settings.local.php
 
 # SimpleTest multi-site environment.
 web/sites/simpletest
