@@ -25,9 +25,9 @@
         "drupal/devel": "~1.0",
         "drupal/ctools": "~3.0",
         "drupal/environment_indicator": "~3.0",
-        "drupal/migrate_tools": "~1.0",
-        "drupal/migrate_manifest": "~1.0",
-        "drupal/migrate_plus": "~1.0",
+        "drupal/migrate_plus": "2.0-beta1",
+        "drupal/migrate_tools": "2.0-beta1",
+        "drupal/migrate_manifest": "1.2",
         "drupal/pathauto": "~1.0",
         "drupal/token": "~1.0",
         "drupal/config_readonly": "~1.0"
