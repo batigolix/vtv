@@ -1,0 +1,44 @@
+uuid: e3f506e3-574c-42ad-b6b7-7c90ae4ee557
+langcode: en
+status: true
+dependencies: {  }
+id: webmaster
+label: Webmaster
+weight: 3
+is_admin: null
+permissions:
+  0: 'add content to books'
+  1: 'administer book outlines'
+  2: 'create new books'
+  3: 'access printer-friendly version'
+  4: 'access content overview'
+  5: 'administer nodes'
+  6: 'bypass node access'
+  7: 'delete all revisions'
+  8: 'revert all revisions'
+  9: 'view all revisions'
+  10: 'view own unpublished content'
+  19: 'create book content'
+  20: 'delete any book content'
+  21: 'delete own book content'
+  22: 'delete book revisions'
+  23: 'edit any book content'
+  24: 'edit own book content'
+  25: 'revert book revisions'
+  26: 'view book revisions'
+  27: 'administer shortcuts'
+  28: 'customize shortcut links'
+  29: 'switch shortcut sets'
+  30: 'access administration pages'
+  31: 'view the administration theme'
+  32: 'access toolbar'
+  33: 'access environment indicator'
+  34: 'use text format advanced_html'
+  35: 'create sponsor content'
+  36: 'delete any sponsor content'
+  37: 'delete own sponsor content'
+  38: 'delete sponsor revisions'
+  39: 'edit any sponsor content'
+  40: 'edit own sponsor content'
+  41: 'revert sponsor revisions'
+  42: 'view sponsor revisions'

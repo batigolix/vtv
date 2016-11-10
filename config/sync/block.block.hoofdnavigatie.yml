@@ -1,0 +1,24 @@
+uuid: e7d3a741-04ab-4fd0-8030-0b7b13e10f57
+langcode: nl
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - earthen
+id: hoofdnavigatie
+theme: earthen
+region: header
+weight: 0
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: Hoofdnavigatie
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+visibility: {  }

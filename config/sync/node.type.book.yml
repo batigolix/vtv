@@ -1,0 +1,16 @@
+uuid: fd685ce3-05cf-4a83-8fe5-84e8593c5389
+langcode: nl
+status: true
+dependencies:
+  enforced:
+    module:
+      - book
+_core:
+  default_config_hash: 2gWGA-X4ERc4McStS7cMEG3ZBpDEqfNRDPTjB1v674Y
+name: Boekpagina
+type: book
+description: '<em>Boeken</em> hebben een hiërarchische navigatie. Vaak gebruikt voor het aanmaken van handboeken of lesmateriaal.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

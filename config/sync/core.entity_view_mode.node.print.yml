@@ -1,0 +1,15 @@
+uuid: 991fcd8c-613d-49b6-aeea-b9ca509186f3
+langcode: nl
+status: false
+dependencies:
+  enforced:
+    module:
+      - book
+  module:
+    - node
+_core:
+  default_config_hash: ERjobPGdPFAM9p5cmQIcJzk-0cY-1mE1OV_pKmMlJaE
+id: node.print
+label: Afdrukken
+targetEntityType: node
+cache: true

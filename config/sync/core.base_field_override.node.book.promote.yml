@@ -1,0 +1,24 @@
+uuid: 2dcf2465-2f65-496c-875b-29751d1e24e7
+langcode: nl
+status: true
+dependencies:
+  config:
+    - node.type.book
+_core:
+  default_config_hash: rYbAZX1eKDo7CVRnBnpYgdmk8HQo5IcKhzePCx9LCZY
+id: node.book.promote
+field_name: promote
+entity_type: node
+bundle: book
+label: 'Aangeraden op de voorpagina'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Aan
+  off_label: Uit
+field_type: boolean
