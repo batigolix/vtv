@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "f7a69833e666e9986adda2728d18a428",
-    "content-hash": "b2ceacdb6af4dc7572a944f0b0784f9c",
+    "hash": "a807f750341b494d9dcb9679038cff45",
+    "content-hash": "9174e78965cac52b670971a7888630d0",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -1732,66 +1732,6 @@
             }
         },
         {
-            "name": "drupal/link-link",
-            "version": "dev-1.x",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupal.org/project/link",
-                "reference": "0058c8ae3b6e61f41fd4f407b50c28a5e51688ef"
-            },
-            "require": {
-                "drupal/core": "~8.0"
-            },
-            "suggest": {
-                "drupal/core": "Required by drupal/link"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-1.x": "1.x-dev"
-                },
-                "drupal": {
-                    "version": "8.x-1.x-dev",
-                    "datestamp": "1467836568"
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "diqidoq",
-                    "homepage": "https://www.drupal.org/user/1001934"
-                },
-                {
-                    "name": "dropcube",
-                    "homepage": "https://www.drupal.org/user/37031"
-                },
-                {
-                    "name": "jcfiala",
-                    "homepage": "https://www.drupal.org/user/163643"
-                },
-                {
-                    "name": "mrfelton",
-                    "homepage": "https://www.drupal.org/user/305669"
-                },
-                {
-                    "name": "sumitmadan",
-                    "homepage": "https://www.drupal.org/user/1538790"
-                },
-                {
-                    "name": "sun",
-                    "homepage": "https://www.drupal.org/user/54136"
-                }
-            ],
-            "homepage": "https://www.drupal.org/project/link",
-            "support": {
-                "source": "http://cgit.drupalcode.org/link"
-            },
-            "time": "2012-09-26 16:31:05"
-        },
-        {
             "name": "drupal/migrate_manifest",
             "version": "1.4.0",
             "source": {
@@ -1889,48 +1829,6 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/migrate_plus"
             }
-        },
-        {
-            "name": "drupal/migrate_source_json",
-            "version": "dev-1.x",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupal.org/project/migrate_source_json",
-                "reference": "b2e4f37a95866ecb8b5dd5fda81d78e6d4af4ccd"
-            },
-            "require": {
-                "drupal/core": "*"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-1.x": "1.x-dev"
-                },
-                "drupal": {
-                    "version": "8.x-1.x-dev",
-                    "datestamp": "1448047439"
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "KarenS",
-                    "homepage": "https://www.drupal.org/user/45874"
-                },
-                {
-                    "name": "mikeryan",
-                    "homepage": "https://www.drupal.org/user/4420"
-                }
-            ],
-            "description": "JSON source migration.",
-            "homepage": "https://www.drupal.org/project/migrate_source_json",
-            "support": {
-                "source": "http://cgit.drupalcode.org/migrate_source_json"
-            },
-            "time": "2015-11-20 19:55:14"
         },
         {
             "name": "drupal/migrate_tools",
@@ -2031,50 +1929,6 @@
             "homepage": "https://www.drupal.org/project/pathauto",
             "support": {
                 "source": "http://cgit.drupalcode.org/pathauto"
-            }
-        },
-        {
-            "name": "drupal/redirect",
-            "version": "1.0.0-alpha1",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupal.org/project/redirect",
-                "reference": "8.x-1.0-alpha1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/redirect-8.x-1.0-alpha1.zip",
-                "reference": null,
-                "shasum": "cdc683b607027d26cbb2360acc7448fc51f84ad8"
-            },
-            "require": {
-                "drupal/core": "*",
-                "drupal/link-link": "*"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-1.x": "1.x-dev"
-                },
-                "drupal": {
-                    "version": "8.x-1.0-alpha1",
-                    "datestamp": "1460041522"
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "Dave Reid",
-                    "homepage": "https://www.drupal.org/user/53892"
-                }
-            ],
-            "description": "Allows users to redirect from old URLs to new URLs.",
-            "homepage": "https://www.drupal.org/project/redirect",
-            "support": {
-                "source": "http://cgit.drupalcode.org/redirect"
             }
         },
         {
