@@ -1,0 +1,36 @@
+<?php
+
+/**
+ * @file
+ * Contains vtvmi.module..
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function vtvmi_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the vtvmi module.
+    case 'help.page.vtvmi':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('My Awesome Module') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+// Fetches the local NID from the migration source desination mapping table.
+function _vtvmi_get_local_nid($nid) {
+  $result = \Drupal::database()->select('migrate_map_content', 'mmc')
+    ->fields('mmc', array('destid1'))
+    ->condition('mmc.sourceid1', $nid)
+    ->execute()->fetchField();
+  if ($result) {
+    return $result;
+  }
+}
+

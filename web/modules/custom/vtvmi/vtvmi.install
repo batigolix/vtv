@@ -1,0 +1,31 @@
+<?php
+/**
+ * @file
+ * Install, update and uninstall functions for the vtvmi module.
+ */
+
+use Drupal\node\Entity\Node;
+
+/**
+ * Updates node author.
+ */
+function vtvmi_update_8001() {
+  $config = \Drupal::service('config.factory')
+    ->getEditable('vtvmi.settings');
+  $webmaster = $config->get('webmaster');
+  $query = \Drupal::entityQuery('user')
+    ->condition('name', $webmaster);
+  $uids = $query->execute();
+  $array_values = array_values($uids);
+  $uid = array_shift($array_values);
+  $query = \Drupal::entityQuery('node');
+  $nids = $query->execute();
+  if (isset($uid)) {
+    foreach ($nids as $nid) {
+      $node = Node::load($nid);
+      $node->uid = $uid;
+      $node->setRevisionAuthorId($uid);
+      $node->save();
+    }
+  }
+}
