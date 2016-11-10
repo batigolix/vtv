@@ -29,7 +29,6 @@
         "drupal/migrate_manifest": "~1.0",
         "drupal/migrate_plus": "~1.0",
         "drupal/pathauto": "~1.0",
-        "drupal/redirect": "~1.0",
         "drupal/token": "~1.0",
         "drupal/config_readonly": "~1.0"
     },
