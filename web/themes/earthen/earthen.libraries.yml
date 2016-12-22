@@ -6,3 +6,14 @@ global-styling:
       stylesheets/screen.css: {}
       stylesheets/print.css: { media: print }
 #      "https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,700,900|Crimson+Text:400,700": {}
+
+responsive-menu:
+  version: VERSION
+  js:
+    js/responsive-menu.js: {}
+  dependencies: {}
+font-awesome:
+  version: 1.x
+  css:
+    theme:
+      stylesheets/font-awesome.min.css: {}

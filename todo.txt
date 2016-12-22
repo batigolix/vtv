@@ -6,3 +6,5 @@
 #- clean up css
 #- clean sass
 #- markup for images and caption
+
+- featurize sponsor

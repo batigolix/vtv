@@ -4,7 +4,7 @@
 @import "grid-settings";
 @import "neat/neat";
 
-/* main containers */
+/* Design og the main containers */
 
 body {
   @include linear-gradient(to bottom, #E9E5DD, #F7F5F3);
@@ -19,15 +19,15 @@ body {
   padding: 2em 0 2em 2em;
 }
 
-/** regions **/
-
+/** Regions **/
 main {
   background: #FFF;
+  padding: 1em;
 }
 
 .footer {
   background: #FFF;
-  padding: 1em 1em 0 1em;
+  padding: 1em;
   .footer-inner {
     background: #EDC9AF;
     padding: 1em;
@@ -58,12 +58,10 @@ main {
   }
 }
 
-/* banner header design */
-
+/* Banner header design */
 .header {
   background: #FFF;
   padding: 1em 1em 0 1em;
-  padding: 1em;
   .block {
     .block-content {
       padding: 0.5em;
@@ -75,55 +73,31 @@ main {
   .site-name-and-slogan {
     font-style: oblique;
     color: #9A360E;
-
     padding: 2em 0 0 0;
-    .site-slogan {
-    }
     .site-name {
       font-size: 1.9em;
       a {
         color: #9A360E;
       }
+      @include media($tablet_narrow) {
+        font-size: 1.4em;
+      }
     }
-  }
-  nav {
-    ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0.5em;
-      overflow: hidden;
-      @include linear-gradient(to bottom, #B0A285, #9A8762);
-      li {
-        float: left;
-        a {
-          display: block;
-          text-align: center;
-          padding: 0.25em 0.5em;
-          margin: 0 0.25em 0 0;
-          text-decoration: none;
-          color: #000;
-          @include border-style(solid);
-          @include border-color(transparent);
-          @include border-width(1px);
-          &:hover, &.is-active {
-            color: #000;
-            @include border-top-radius(5px);
-            @include border-bottom-radius(5px);
-            @include border-color(DarkRed);
-            @include linear-gradient(to bottom, #FF681F, #FE4C40);
-          }
-        }
+    .site-slogan {
+      @include media($tablet_narrow) {
+        font-size: 1.1em;
       }
     }
   }
 }
 
+/* Content */
 h1, h2, h3, h4 {
   margin: 1em 0;
 }
 
 h1 {
-  font-size: 2em;
+  font-size: 1.6em;
   color: #9A360E;
   a {
     color: #9A360E;
@@ -133,8 +107,14 @@ h1 {
   }
 }
 
+.page-title {
+  h1 {
+    margin: 0 0 1em 0;
+  }
+}
+
 h2 {
-  font-size: 1.6em;
+  font-size: 1.4em;
   color: #815432;
   a {
     color: #815432;
@@ -145,7 +125,7 @@ h2 {
 }
 
 h3 {
-  font-size: 1.3em;
+  font-size: 1.2em;
   color: #8D7C5E;
   a {
     color: #8D7C5E;
@@ -166,25 +146,7 @@ h4 {
   }
 }
 
-/* Content style */
-
-article {
-  ul {
-    color: #3D3629;
-    margin: 0;
-    padding: 1em 0;
-    li {
-      padding: 0 0 0 1em;
-      background-image: url('../images/BlockContentBullets.png');
-      background-repeat: no-repeat;
-      margin: 0.5em 0 0.5em 0;
-      line-height: 1em;
-    }
-  }
-}
-
 /* Sidebar blocks */
-
 .layout-sidebar-second {
   .block {
     @include border-top-radius(5px);
@@ -195,7 +157,7 @@ article {
     @include border-width(1px);
     padding: 0.5em;
     font-size: 0.9em;
-    margin: 0.5em;
+    margin: 0 0 0.5em 0;
     color: #534937;
     h2 {
       @include border-top-radius(5px);
@@ -209,6 +171,7 @@ article {
       color: #000;
       @include linear-gradient(to bottom, #FF681F, #FE4C40);
       padding: 0 0.5em 0.5em 0.5em;
+      margin: 0;
       .header-icon {
         background-image: url('../images/BlockHeaderIcon.png');
         background-position: left top;
@@ -221,39 +184,71 @@ article {
       }
     }
     .block-content {
-      padding: 0 0.5em 0 0.5em;
+      padding: 1em 0.5em 0 0.5em;
     }
-    ul {
-      padding: 0 0 0 1.5em;
-      li {
-        list-style-image: url('../images/BlockContentBullets.png');
-        a {
-          color: #A3390F;
-          &:link, &:visited, &:hover {
-            color: #A3390F;
-          }
-        }
+  }
+}
+
+/* List syling */
+ul.links, .book-menu ul, .footer ul, .book-navigation ul.menu {
+  padding: 0;
+  li {
+    padding-left: 1.5em;
+    &:before {
+      content: "\f0a9"; /* FontAwesome Unicode */
+      font-family: FontAwesome;
+      display: inline-block;
+      margin: 0 5px 0 -15px;
+      padding: 0 5px 0 -15px;
+      color: #A3390F;
+    }
+    a {
+      color: #A3390F;
+      &:link, &:visited, &:hover {
+        color: #A3390F;
       }
     }
   }
+}
+
+/* Post footer region */
+.post-footer {
+  padding: 2em;
+  @include outer-container;
   .sponsors {
-    h3 {
-      font-size: 1em;
-      margin: 0 0 1em 0;
+    margin: 0 auto;
+    width: 50%;
+    .sponsor-bar {
+      list-style-type: none;
+      li {
+        float: left;
+        margin-right: 10px;
+      }
     }
-    .views-field-field-image {
+  }
+}
+
+/* Sponsor tower sidebar */
+.sponsors {
+  .sponsor-tower {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    li {
+      list-style-image: none;
+      @include border-style(solid);
+      @include border-color($medium_gray);
+      @include border-width(0 0 1px 0);
+      padding: 1em 0;
+      h3 {
+        font-size: 1em;
+        margin: 0 0 1em 0;
+      }
       img {
         @include border-style(solid);
         @include border-color($medium_gray);
         @include border-width(1px);
       }
-    }
-    .views-row {
-      @include border-style(solid);
-      @include border-color($medium_gray);
-      @include border-width(0 0 1px 0);
-      padding: 1em 0;
-
     }
   }
 }
@@ -267,15 +262,14 @@ article {
   }
 }
 
-/* book navigation under book content */
-
-.book-navigation {
-  border-top: 2px solid #FE4C40;
+/* Book navigation under book content */
+nav.book-navigation {
   opacity: 0.9;
   margin: 1em 0;
   .menu {
-    padding-bottom: 0;
-    padding-top: 1em;
+    padding: 1em 0;
+    border-top: 2px solid #FE4C40;
+    border-bottom: 2px solid #FE4C40;
   }
   .book-pager {
     margin: 0;
@@ -329,12 +323,14 @@ article {
   }
 }
 
-/** Layout **/
-
+/** Respnosive layout **/
 .layout-content {
-  @include span-columns(7);
+  @include span-columns(8);
   @include media($tablet_wide) {
     @include span-columns(6 of 8);
+  }
+  @include media($tablet_narrow) {
+    @include span-columns(6 of 6);
   }
   @include media($mobile) {
     @include span-columns(4 of 4);
@@ -342,12 +338,12 @@ article {
 }
 
 .layout-sidebar-second {
-  @include span-columns(3);
+  @include span-columns(4);
   @include media($tablet_wide) {
     @include span-columns(2 of 8);
   }
   @include media($tablet_narrow) {
-    @include span-columns(2 of 6);
+    @include span-columns(6 of 6);
   }
   @include media($mobile) {
     @include span-columns(4 of 4);
@@ -371,82 +367,74 @@ main {
       }
     }
   }
-  ul {
-    padding: 0 0 0 1.5em;
-    li {
-      list-style-image: url('../images/BlockContentBullets.png');
-      a {
-        color: #A3390F;
-        &:link, &:visited, &:hover {
-          color: #A3390F;
-        }
-      }
-    }
-  }
 }
 
 .header {
   @include outer-container;
   .site-logo {
-    @include span-columns(2);
+    @include span-columns(3);
     @include media($tablet_wide) {
-      @include span-columns(12 of 12);
+      @include span-columns(2 of 8);
+    }
+    @include media($tablet_narrow) {
+      @include span-columns(1 of 6);
     }
   }
   .site-name-and-slogan {
     padding-top: 1.3em;
-    @include span-columns(8);
+    @include span-columns(9);
     @include media($tablet_wide) {
-      @include span-columns(12 of 12);
+      @include span-columns(6 of 8);
+    }
+    @include media($tablet_narrow) {
+      @include span-columns(5 of 6);
     }
     @include omega();
   }
   nav {
-    @include span-columns(10);
+    @include span-columns(12);
 
   }
 }
 
-/**
- * @file
- * Styles for breadcrumbs.
- */
-
+/* Breadcrumbs */
 .breadcrumb {
   padding-bottom: 0.5em;
-}
-
-.breadcrumb ol {
-  margin: 0;
-  padding: 0;
-}
-
-[dir="rtl"] .breadcrumb ol {
-  /* This is required to win over specificity of [dir="rtl"] ol */
-  margin-right: 0;
-}
-
-.breadcrumb li {
-  display: inline;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  a {
-    color: #FE4C40;
-    &:link, &:visited, &:hover {
-      color: #FE4C40;
+  ol {
+    margin: 0;
+    padding: 0;
+    li {
+      display: inline;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      a {
+        color: #FE4C40;
+        &:link, &:visited, &:hover {
+          color: #FE4C40;
+        }
+      }
+      /* IE8 does not support :not() and :last-child. */
+      &:before {
+        content: ' \BB ';
+      }
+      &:first-child:before {
+        content: none;
+      }
     }
   }
 }
 
-/* IE8 does not support :not() and :last-child. */
-.breadcrumb li:before {
-  content: ' \BB ';
+[dir="rtl"] {
+  .breadcrumb {
+    ol {
+      /* This is required to win over specificity of [dir="rtl"] ol */
+      margin-right: 0;
+    }
+  }
 }
 
-.breadcrumb li:first-child:before {
-  content: none;
-}
+/* Images with caption */
 
 figure {
   display: block;
@@ -455,8 +443,8 @@ figure {
   margin: 1em 0;
   padding: 0;
   img {
-    padding:2px;
-    border:2px solid #FE4C40;
+    padding: 2px;
+    border: 2px solid #FE4C40;
   }
   &:hover {
     figcaption {
@@ -475,5 +463,76 @@ figure {
     -webkit-transition: all 0.6s ease;
     -moz-transition: all 0.6s ease;
     -o-transition: all 0.6s ease;
+  }
+}
+
+/* Responsive menu */
+nav {
+  ul {
+    &.topnav {
+      list-style-type: none;
+      margin: 0;
+      padding: 8px;
+      overflow: hidden;
+      @include linear-gradient(to bottom, #B0A285, #9A8762);
+      li {
+        float: left;
+        a {
+          display: inline-block;
+          color: #000;
+          text-align: center;
+          padding: 10px 12px;
+          text-decoration: none;
+          transition: 0.3s;
+          font-size: 1em;
+          &:hover,
+          &.is-active {
+            background-color: #555;
+            @include border-top-radius(5px);
+            @include border-bottom-radius(5px);
+            @include border-color(DarkRed);
+            @include linear-gradient(to bottom, #FF681F, #FE4C40);
+          }
+        }
+        &.icon {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+/* Mobile view of the responsive menu */
+@include media($mobile) {
+  nav {
+    ul {
+      &.topnav {
+        li {
+          &:not(:first-child) {
+            display: none;
+          }
+          &.icon {
+            float: right;
+            display: inline-block;
+          }
+        }
+      }
+      &.topnav.responsive {
+        position: relative;
+        li {
+          float: none;
+          display: inline;
+          a {
+            display: block;
+            text-align: left;
+          }
+          &.icon {
+            position: absolute;
+            right: 0;
+            top: 0;
+          }
+        }
+      }
+    }
   }
 }

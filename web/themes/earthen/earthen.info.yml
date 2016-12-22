@@ -5,6 +5,8 @@ package: Other
 core: 8.x
 libraries:
   - earthen/global-styling
+  - earthen/responsive-menu
+  - earthen/font-awesome
 
 base theme: stable
 

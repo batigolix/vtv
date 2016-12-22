@@ -3,6 +3,8 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.teaser
+    - core.entity_view_mode.node.tiny_teaser
     - field.storage.node.field_description
     - field.storage.node.field_image
     - image.style.medium
@@ -57,9 +59,19 @@ display:
           items_per_page: null
           offset: 0
       style:
-        type: default
+        type: html_list
+        options:
+          row_class: ''
+          default_row_class: true
+          uses_fields: false
+          type: ul
+          wrapper_class: ''
+          class: sponsor-tower
       row:
-        type: fields
+        type: 'entity:node'
+        options:
+          relationship: none
+          view_mode: teaser
       fields:
         title:
           id: title
@@ -313,6 +325,42 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.field_description'
+        - 'config:field.storage.node.field_image'
+  block_2:
+    display_plugin: block
+    id: block_2
+    display_title: 'Blok 2'
+    position: 2
+    display_options:
+      display_extenders: {  }
+      style:
+        type: html_list
+        options:
+          row_class: ''
+          default_row_class: false
+          uses_fields: false
+          type: ul
+          wrapper_class: ''
+          class: sponsor-bar
+      defaults:
+        style: false
+        row: false
+        header: false
+      row:
+        type: 'entity:node'
+        options:
+          relationship: none
+          view_mode: tiny_teaser
+      header: {  }
     cache_metadata:
       max-age: -1
       contexts:

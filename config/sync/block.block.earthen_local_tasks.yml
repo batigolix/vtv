@@ -9,7 +9,7 @@ _core:
 id: earthen_local_tasks
 theme: earthen
 region: content
-weight: -5
+weight: -2
 provider: null
 plugin: local_tasks_block
 settings:

@@ -43,6 +43,7 @@
  * @see html.html.twig
  */
 #}
+
 <div class="layout-container">
 
   <header role="banner" class="header">
@@ -83,6 +84,12 @@
         {{ page.footer }}
       </div>
     </footer>
+  {% endif %}
+
+  {% if page.post_footer %}
+    <div class="post-footer">
+      {{ page.post_footer }}
+    </div>
   {% endif %}
 
 </div>{# /.layout-container #}

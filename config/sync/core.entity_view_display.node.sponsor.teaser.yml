@@ -6,17 +6,31 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.sponsor.field_description
     - field.field.node.sponsor.field_image
+    - image.style.medium
     - node.type.sponsor
   module:
+    - image
     - user
 id: node.sponsor.teaser
 targetEntityType: node
 bundle: sponsor
 mode: teaser
 content:
-  links:
-    weight: 100
+  field_description:
+    type: string
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_image:
+    type: image
+    weight: 0
+    label: hidden
+    settings:
+      image_style: medium
+      image_link: ''
+    third_party_settings: {  }
 hidden:
-  field_description: true
-  field_image: true
   langcode: true
+  links: true
