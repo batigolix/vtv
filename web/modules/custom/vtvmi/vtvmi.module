@@ -2,35 +2,20 @@
 
 /**
  * @file
- * Contains vtvmi.module..
+ * Contains monetdb_migrate.module.
  */
 
 use Drupal\Core\Routing\RouteMatchInterface;
 
 /**
- * Implements hook_help().
+ * Fetches the local NID from the migration source destination mapping table.
  */
-function vtvmi_help($route_name, RouteMatchInterface $route_match) {
-  switch ($route_name) {
-    // Main module help for the vtvmi module.
-    case 'help.page.vtvmi':
-      $output = '';
-      $output .= '<h3>' . t('About') . '</h3>';
-      $output .= '<p>' . t('My Awesome Module') . '</p>';
-      return $output;
-
-    default:
-  }
+function _vtvmi_migrate_get_local_nid($nid) {
+    $result = \Drupal::database()->select('migrate_map_vtvmi_books', 'mmvb')
+        ->fields('mmvb', array('destid1'))
+        ->condition('mmvb.sourceid1', $nid)
+        ->execute()->fetchField();
+    if ($result) {
+        return $result;
+    }
 }
-
-// Fetches the local NID from the migration source desination mapping table.
-function _vtvmi_get_local_nid($nid) {
-  $result = \Drupal::database()->select('migrate_map_content', 'mmc')
-    ->fields('mmc', array('destid1'))
-    ->condition('mmc.sourceid1', $nid)
-    ->execute()->fetchField();
-  if ($result) {
-    return $result;
-  }
-}
-

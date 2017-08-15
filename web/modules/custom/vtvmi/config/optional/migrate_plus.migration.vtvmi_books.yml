@@ -1,0 +1,84 @@
+# Migration configuration for imported articles.
+id: vtvmi_books
+label: Import books from VTV6..
+migration_group: Drupal Import
+#migration_dependencies:
+#  require:
+#    - import_drupal_images
+dependencies:
+  enforced:
+    module:
+      - vtvmi
+
+destination:
+  plugin: entity:node
+
+source:
+  plugin: url
+  data_fetcher_plugin: http
+  data_parser_plugin: json
+
+  urls: http://vtv6.dvmwk.kem/boe_tools/content.json
+
+  ids:
+    nid:
+      type: integer
+
+  item_selector: content/
+
+  fields:
+    -
+      name: nid
+      label: 'Nid'
+      selector: /item/nid
+    -
+      name: title
+      label: 'Title'
+      selector: /item/title
+    -
+      name: created
+      label: 'Created'
+      selector: /item/created
+    -
+      name: changed
+      label: 'Changed'
+      selector: /item/changed
+    -
+      name: status
+      label: 'Status'
+      selector: /item/status
+    -
+      name: path
+      label: 'Path'
+      selector: /item/path
+    -
+      name: body
+      label: 'Body'
+      selector: /item/body
+    -
+      name: uid
+      label: 'Uid'
+      selector: /item/uid
+
+process:
+  type:
+    plugin: default_value
+    default_value: book
+
+  title: title
+  created: created
+  changed: changed
+  status: status
+  body/value: body
+
+  body/format:
+    plugin: default_value
+    default_value: basic_html
+
+  uid:
+    plugin: default_value
+    default_value: 1
+
+  default_language:
+    plugin: default_value
+    default_value: nl
