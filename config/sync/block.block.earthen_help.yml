@@ -1,0 +1,22 @@
+uuid: d6567876-c526-4d4b-9c84-7a1c3e1e89fc
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - earthen
+_core:
+  default_config_hash: 8I8iACSa0sKO3k3jlvUG1ge52rfcKX7USJAQYnzuBgg
+id: earthen_help
+theme: earthen
+region: content
+weight: -6
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

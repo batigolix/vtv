@@ -1,0 +1,78 @@
+uuid: 9a29c76c-8123-40f3-8613-7dabbccec4d9
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - vtvmi
+id: vtvmi_books
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags: null
+migration_group: 'Drupal Import'
+label: 'Import books from VTV6..'
+source:
+  plugin: url
+  data_fetcher_plugin: http
+  data_parser_plugin: json
+  urls: 'http://vtv6.dvmwk.kem/boe_tools/content.json'
+  ids:
+    nid:
+      type: integer
+  item_selector: content/
+  fields:
+    -
+      name: nid
+      label: Nid
+      selector: /item/nid
+    -
+      name: title
+      label: Title
+      selector: /item/title
+    -
+      name: created
+      label: Created
+      selector: /item/created
+    -
+      name: changed
+      label: Changed
+      selector: /item/changed
+    -
+      name: status
+      label: Status
+      selector: /item/status
+    -
+      name: path
+      label: Path
+      selector: /item/path
+    -
+      name: body
+      label: Body
+      selector: /item/body
+    -
+      name: uid
+      label: Uid
+      selector: /item/uid
+process:
+  type:
+    plugin: default_value
+    default_value: book
+  nid: nid
+  title: title
+  created: created
+  changed: changed
+  status: status
+  body/value: body
+  body/format:
+    plugin: default_value
+    default_value: basic_html
+  uid:
+    plugin: default_value
+    default_value: 1
+  default_language:
+    plugin: default_value
+    default_value: nl
+destination:
+  plugin: 'entity:node'
+migration_dependencies: null
