@@ -20,7 +20,7 @@ class AddBooksController extends ControllerBase {
 
 
     // @todo clean url.
-    $uri = 'http://vtv6.dvmwk.kem/boe_tools/books.json';
+    $uri = 'http://vtv6.dvmwk.kem/boe_tools/book-structure.json';
     try {
       $response = \Drupal::httpClient()
           ->get($uri, array('headers' => array('Accept' => 'text/plain')));

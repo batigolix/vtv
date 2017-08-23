@@ -65,6 +65,7 @@ process:
     plugin: default_value
     default_value: book
 
+  nid: nid
   title: title
   created: created
   changed: changed
