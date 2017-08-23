@@ -332,12 +332,12 @@ h4 {
   .layout-sidebar-second .block .block-content {
     padding: 1em 0.5em 0 0.5em; }
 
-/* List syling */
-ul.links, .book-menu ul, .footer ul, .book-navigation ul.menu {
+/* List styling */
+ul.links, .book-menu ul, .footer ul, .book-navigation ul.menu, .node__content ul {
   padding: 0; }
-  ul.links li, .book-menu ul li, .footer ul li, .book-navigation ul.menu li {
+  ul.links li, .book-menu ul li, .footer ul li, .book-navigation ul.menu li, .node__content ul li {
     padding-left: 1.5em; }
-    ul.links li:before, .book-menu ul li:before, .footer ul li:before, .book-navigation ul.menu li:before {
+    ul.links li:before, .book-menu ul li:before, .footer ul li:before, .book-navigation ul.menu li:before, .node__content ul li:before {
       content: "\f0a9";
       /* FontAwesome Unicode */
       font-family: FontAwesome;
@@ -345,9 +345,9 @@ ul.links, .book-menu ul, .footer ul, .book-navigation ul.menu {
       margin: 0 5px 0 -15px;
       padding: 0 5px 0 -15px;
       color: #A3390F; }
-    ul.links li a, .book-menu ul li a, .footer ul li a, .book-navigation ul.menu li a {
+    ul.links li a, .book-menu ul li a, .footer ul li a, .book-navigation ul.menu li a, .node__content ul li a {
       color: #A3390F; }
-      ul.links li a:link, ul.links li a:visited, ul.links li a:hover, .book-menu ul li a:link, .book-menu ul li a:visited, .book-menu ul li a:hover, .footer ul li a:link, .footer ul li a:visited, .footer ul li a:hover, .book-navigation ul.menu li a:link, .book-navigation ul.menu li a:visited, .book-navigation ul.menu li a:hover {
+      ul.links li a:link, ul.links li a:visited, ul.links li a:hover, .book-menu ul li a:link, .book-menu ul li a:visited, .book-menu ul li a:hover, .footer ul li a:link, .footer ul li a:visited, .footer ul li a:hover, .book-navigation ul.menu li a:link, .book-navigation ul.menu li a:visited, .book-navigation ul.menu li a:hover, .node__content ul li a:link, .node__content ul li a:visited, .node__content ul li a:hover {
         color: #A3390F; }
 
 /* Post footer region */
@@ -388,10 +388,20 @@ ul.links, .book-menu ul, .footer ul, .book-navigation ul.menu {
       border-color: #999;
       border-width: 1px; }
 
-.button a {
-  color: #FFF; }
-  .button a:link, .button a:visited, .button a:hover {
+.button {
+  background-color: dodgerblue;
+  border: none;
+  color: white;
+  padding: 4px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 4px; }
+  .button a {
     color: #FFF; }
+    .button a:link, .button a:visited, .button a:hover {
+      color: #FFF; }
 
 /* Book navigation under book content */
 nav.book-navigation {

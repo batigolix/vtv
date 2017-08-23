@@ -70,7 +70,11 @@
  *   in different view modes.
  */
 #}
-<article{{ attributes }}>
+{%
+  set classes = []
+%}
+{{ attach_library('classy/node') }}
+<article{{ attributes.addClass(classes) }}>
 
   {{ title_prefix }}
   {% if not page %}
@@ -81,16 +85,16 @@
   {{ title_suffix }}
 
   {% if display_submitted %}
-    <footer>
+    <footer class="node__meta">
       {{ author_picture }}
-      <div{{ author_attributes }}>
+      <div{{ author_attributes.addClass('node__submitted') }}>
         {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
         {{ metadata }}
       </div>
     </footer>
   {% endif %}
 
-  <div{{ content_attributes }}>
+  <div{{ content_attributes.addClass('node__content') }}>
     {{ content }}
   </div>
 

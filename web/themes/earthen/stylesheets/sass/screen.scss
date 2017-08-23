@@ -189,8 +189,8 @@ h4 {
   }
 }
 
-/* List syling */
-ul.links, .book-menu ul, .footer ul, .book-navigation ul.menu {
+/* List styling */
+ul.links, .book-menu ul, .footer ul, .book-navigation ul.menu, .node__content ul {
   padding: 0;
   li {
     padding-left: 1.5em;
@@ -260,6 +260,15 @@ ul.links, .book-menu ul, .footer ul, .book-navigation ul.menu {
       color: #FFF;
     }
   }
+  background-color: dodgerblue;
+  border: none;
+  color: white;
+  padding: 4px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 4px;
 }
 
 /* Book navigation under book content */
