@@ -1,0 +1,30 @@
+uuid: 77e560b0-b342-41c8-ade8-f852742ab6ea
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.tiny_teaser
+    - field.field.node.sponsor.field_description
+    - field.field.node.sponsor.field_image
+    - image.style.thumbnail
+    - node.type.sponsor
+  module:
+    - image
+    - user
+id: node.sponsor.tiny_teaser
+targetEntityType: node
+bundle: sponsor
+mode: tiny_teaser
+content:
+  field_image:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: thumbnail
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+hidden:
+  field_description: true
+  langcode: true
+  links: true

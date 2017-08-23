@@ -3,3 +3,22 @@ type: module
 description: My Awesome Module
 core: 8.x
 package: Custom
+config_devel:
+  optional:
+    - node.type.sponsor
+    - core.base_field_override.node.sponsor.title
+    - core.base_field_override.node.sponsor.promote
+    - language.content_settings.node.sponsor
+    - field.storage.node.field_description
+    - field.field.node.sponsor.field_description
+    - field.storage.node.field_image
+    - field.field.node.sponsor.field_image
+    - core.entity_form_display.node.sponsor.default
+    - core.entity_view_display.node.sponsor.default
+    - core.entity_view_display.node.sponsor.teaser
+    - image.style.thumbnail
+    - core.entity_view_mode.node.tiny_teaser
+    - core.entity_view_display.node.sponsor.tiny_teaser
+    - views.view.sponsors
+    - block.block.views_block__sponsors_block_1
+    - block.block.views_block__sponsors_block_2
