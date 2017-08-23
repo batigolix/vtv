@@ -1,4 +1,4 @@
-uuid: b19cd8b3-9d87-4cba-a102-98b4471c73bc
+uuid: e4b1b86b-73c8-42dc-95e7-d7563e1cd40c
 langcode: en
 status: true
 dependencies:
@@ -9,7 +9,7 @@ _core:
 id: earthen_local_actions
 theme: earthen
 region: content
-weight: -1
+weight: -6
 provider: null
 plugin: local_actions_block
 settings:

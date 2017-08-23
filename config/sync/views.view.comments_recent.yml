@@ -1,5 +1,5 @@
-uuid: 2da07b59-2a49-4252-ac0b-aeefeb668894
-langcode: nl
+uuid: f7b8ee96-9bfa-4a09-8d1e-70210284b440
+langcode: en
 status: true
 dependencies:
   module:
@@ -7,11 +7,11 @@ dependencies:
     - node
     - user
 _core:
-  default_config_hash: HDMjKTBWeuHvsV6i6VvULmfhiSjNzIH1hCoy5GuZD0E
+  default_config_hash: HacS-nsDH7uyoKhQHNyV_MNRClmPVuhU_fWZgNuEyIs
 id: comments_recent
-label: 'Recente reacties'
+label: 'Recent comments'
 module: views
-description: 'Recente reacties.'
+description: 'Recent comments.'
 tag: default
 base_table: comment_field_data
 base_field: cid
@@ -20,7 +20,7 @@ display:
   default:
     display_plugin: default
     id: default
-    display_title: Hoofd
+    display_title: Master
     position: 0
     display_options:
       access:
@@ -51,10 +51,6 @@ display:
         type: fields
         options:
           default_field_elements: true
-          inline:
-            subject: subject
-            changed: changed
-          separator: ' '
           hide_empty: false
       relationships:
         node:
@@ -225,7 +221,7 @@ display:
           plugin_id: field
           entity_type: comment
           entity_field: cid
-      title: 'Recente reacties'
+      title: 'Recent comments'
       empty:
         area_text_custom:
           id: area_text_custom
@@ -236,7 +232,7 @@ display:
           admin_label: ''
           label: ''
           empty: true
-          content: 'Geen reacties beschikbaar.'
+          content: 'No comments available.'
           tokenize: false
           plugin_id: text_custom
       display_extenders: {  }
@@ -250,11 +246,11 @@ display:
   block_1:
     display_plugin: block
     id: block_1
-    display_title: Blok
+    display_title: Block
     position: 1
     display_options:
-      block_description: 'Recente reacties'
-      block_category: 'Lijsten (Overzichten)'
+      block_description: 'Recent comments'
+      block_category: 'Lists (Views)'
       allow:
         items_per_page: true
       display_extenders: {  }

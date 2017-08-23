@@ -1,4 +1,4 @@
-uuid: 17719cc5-879d-4bb4-bcee-ffcf71ce77bc
+uuid: 8b5f8787-4689-45d4-83a5-bf6321ecb54c
 langcode: en
 status: true
 dependencies:
@@ -10,8 +10,8 @@ _core:
   default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
 id: earthen_messages
 theme: earthen
-region: content
-weight: -5
+region: header
+weight: -2
 provider: null
 plugin: system_messages_block
 settings:

@@ -1,5 +1,5 @@
-uuid: a6ce5070-9f50-4a9d-ab5f-8813ff409028
-langcode: nl
+uuid: dcf08888-44ce-436b-b1a2-c738211df554
+langcode: en
 status: true
 dependencies:
   module:
@@ -7,7 +7,7 @@ dependencies:
 _core:
   default_config_hash: TSkg_gUZvk-39yXFrIFnKjsxuEzO0qBH82TdDxOMMr4
 id: comment_save_action
-label: 'Reactie opslaan'
+label: 'Save comment'
 type: comment
 plugin: comment_save_action
 configuration: {  }

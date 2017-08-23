@@ -1,16 +1,16 @@
-uuid: 7fd9705e-8be5-4172-8412-914ed0466b65
-langcode: nl
+uuid: 67c85b68-8570-4c4d-8618-e1f8080dee5e
+langcode: en
 status: true
 dependencies:
   module:
     - node
     - user
 _core:
-  default_config_hash: fUDNcSYKNw6cTMPsX3G9VhsUGov5yUe6_TBHbcnZHyo
+  default_config_hash: tS8PbpJX90aRFC3-UTgXzdqkq7_2frk2pz4TMijEebM
 id: content
-label: Inhoud
+label: Content
 module: node
-description: 'Inhoud zoeken en beheren'
+description: 'Find and manage content.'
 tag: default
 base_table: node_field_data
 base_field: nid
@@ -32,19 +32,19 @@ display:
           submit_button: Filter
           reset_button: true
           reset_button_label: Reset
-          exposed_sorts_label: 'Sorteren op'
+          exposed_sorts_label: 'Sort by'
           expose_sort_order: true
-          sort_asc_label: Oplopend
-          sort_desc_label: Aflopend
+          sort_asc_label: Asc
+          sort_desc_label: Desc
       pager:
         type: full
         options:
           items_per_page: 50
           tags:
-            previous: '‹ Vorige'
-            next: 'Volgende ›'
-            first: '« Eerste'
-            last: 'Laatste »'
+            previous: '‹ Previous'
+            next: 'Next ›'
+            first: '« First'
+            last: 'Last »'
       style:
         type: table
         options:
@@ -157,11 +157,18 @@ display:
           hide_alter_empty: true
           plugin_id: node_bulk_form
           entity_type: node
+        nid:
+          id: nid
+          table: node_field_data
+          field: nid
+          entity_type: node
+          entity_field: nid
+          plugin_id: field
         title:
           id: title
           table: node_field_data
           field: title
-          label: Titel
+          label: Title
           exclude: false
           alter:
             alter_text: false
@@ -184,7 +191,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Inhoudstype
+          label: 'Content type'
           exclude: false
           alter:
             alter_text: false
@@ -247,7 +254,7 @@ display:
           table: users_field_data
           field: name
           relationship: uid
-          label: Auteur
+          label: Author
           exclude: false
           alter:
             alter_text: false
@@ -287,7 +294,7 @@ display:
           id: changed
           table: node_field_data
           field: changed
-          label: Bijgewerkt
+          label: Updated
           exclude: false
           alter:
             alter_text: false
@@ -312,7 +319,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Bewerkingen
+          label: Operations
           exclude: false
           alter:
             alter_text: false
@@ -356,61 +363,46 @@ display:
           destination: true
           plugin_id: entity_operations
       filters:
-        status_extra:
-          id: status_extra
+        title:
+          id: title
           table: node_field_data
-          field: status_extra
-          operator: '='
-          value: false
-          plugin_id: node_status
-          group: 1
-          entity_type: node
-        status:
-          id: status
-          table: node_field_data
-          field: status
+          field: title
           relationship: none
           group_type: group
           admin_label: ''
-          operator: '='
-          value: '1'
+          operator: contains
+          value: ''
           group: 1
           exposed: true
           expose:
-            operator_id: ''
-            label: Status
+            operator_id: title_op
+            label: Title
             description: ''
             use_operator: false
-            operator: status_op
-            identifier: status
+            operator: title_op
+            identifier: title
             required: false
             remember: false
             multiple: false
             remember_roles:
               authenticated: authenticated
-          is_grouped: true
+              anonymous: '0'
+              administrator: '0'
+          is_grouped: false
           group_info:
-            label: Publicatiestatus
+            label: ''
             description: ''
-            identifier: status
+            identifier: ''
             optional: true
             widget: select
             multiple: false
             remember: false
             default_group: All
             default_group_multiple: {  }
-            group_items:
-              1:
-                title: Gepubliceerd
-                operator: '='
-                value: '1'
-              2:
-                title: 'Niet gepubliceerd'
-                operator: '='
-                value: '0'
-          plugin_id: boolean
+            group_items: {  }
+          plugin_id: string
           entity_type: node
-          entity_field: status
+          entity_field: title
         type:
           id: type
           table: node_field_data
@@ -424,7 +416,7 @@ display:
           exposed: true
           expose:
             operator_id: type_op
-            label: Inhoudstype
+            label: 'Content type'
             description: ''
             use_operator: false
             operator: type_op
@@ -452,46 +444,52 @@ display:
           plugin_id: bundle
           entity_type: node
           entity_field: type
-        title:
-          id: title
+        status:
+          id: status
           table: node_field_data
-          field: title
+          field: status
           relationship: none
           group_type: group
           admin_label: ''
-          operator: contains
-          value: ''
+          operator: '='
+          value: '1'
           group: 1
           exposed: true
           expose:
-            operator_id: title_op
-            label: Titel
+            operator_id: ''
+            label: Status
             description: ''
             use_operator: false
-            operator: title_op
-            identifier: title
+            operator: status_op
+            identifier: status
             required: false
             remember: false
             multiple: false
             remember_roles:
               authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-          is_grouped: false
+          is_grouped: true
           group_info:
-            label: ''
+            label: 'Published status'
             description: ''
-            identifier: ''
+            identifier: status
             optional: true
             widget: select
             multiple: false
             remember: false
             default_group: All
             default_group_multiple: {  }
-            group_items: {  }
-          plugin_id: string
+            group_items:
+              1:
+                title: Published
+                operator: '='
+                value: '1'
+              2:
+                title: Unpublished
+                operator: '='
+                value: '0'
+          plugin_id: boolean
           entity_type: node
-          entity_field: title
+          entity_field: status
         langcode:
           id: langcode
           table: node_field_data
@@ -505,7 +503,7 @@ display:
           exposed: true
           expose:
             operator_id: langcode_op
-            label: Taal
+            label: Language
             description: ''
             use_operator: false
             operator: langcode_op
@@ -533,15 +531,24 @@ display:
           plugin_id: language
           entity_type: node
           entity_field: langcode
+        status_extra:
+          id: status_extra
+          table: node_field_data
+          field: status_extra
+          operator: '='
+          value: false
+          plugin_id: node_status
+          group: 1
+          entity_type: node
       sorts: {  }
-      title: Inhoud
+      title: Content
       empty:
         area_text_custom:
           id: area_text_custom
           table: views
           field: area_text_custom
           empty: true
-          content: 'Geen inhoud beschikbaar.'
+          content: 'No content available.'
           plugin_id: text_custom
       arguments: {  }
       relationships:
@@ -559,7 +566,7 @@ display:
           1: AND
       display_extenders: {  }
     display_plugin: default
-    display_title: Hoofd
+    display_title: Master
     id: default
     position: 0
     cache_metadata:
@@ -578,20 +585,20 @@ display:
       path: admin/content/node
       menu:
         type: 'default tab'
-        title: Inhoud
+        title: Content
         description: ''
         menu_name: admin
         weight: -10
         context: ''
       tab_options:
         type: normal
-        title: Inhoud
-        description: 'Inhoud vinden en beheren'
+        title: Content
+        description: 'Find and manage content'
         menu_name: admin
         weight: -10
       display_extenders: {  }
     display_plugin: page
-    display_title: Pagina
+    display_title: Page
     id: page_1
     position: 1
     cache_metadata:

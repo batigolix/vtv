@@ -1,14 +1,14 @@
-uuid: 5414d74a-a26e-4aa8-86bc-97c676a4b371
+uuid: 6394e668-e511-411a-a046-c4e6a1abf788
 name: 'Volkstheater Frans Boermans'
-mail: bdoesborg@gmail.com
+mail: mdoesborg@gmail.com
 slogan: 'Met ''ne lach en ''n traon'
 page:
   403: ''
   404: ''
-  front: /node
+  front: /node/4
 admin_compact_mode: false
 weight_select_max: 100
-langcode: nl
-default_langcode: nl
+langcode: en
+default_langcode: en
 _core:
   default_config_hash: AyT9s8OUcclfALRE_imByOMgtZ19eOlqdF6zI3p7yqo

@@ -1,5 +1,5 @@
-uuid: 320773ad-d38f-4811-a756-42a20c491671
-langcode: nl
+uuid: 5e8911de-152b-41ae-8ba5-3c3cb8ddad83
+langcode: en
 status: true
 dependencies:
   config:
@@ -7,11 +7,12 @@ dependencies:
     - field.field.node.article.body
     - field.field.node.article.comment
     - field.field.node.article.field_image
+    - field.field.node.article.field_tags
     - node.type.article
   module:
     - user
 _core:
-  default_config_hash: Q90X1FmFdOkTx8udckWPoAgleOstOerbgDnNpoP6PO4
+  default_config_hash: 2rIr6K5Q0UQ9khg0zE_CK-PtJH76UL-BDDZcZnZzwCc
 id: node.article.rss
 targetEntityType: node
 bundle: article
@@ -19,8 +20,9 @@ mode: rss
 content:
   links:
     weight: 100
+    region: content
 hidden:
   body: true
   comment: true
   field_image: true
-  langcode: true
+  field_tags: true

@@ -1,5 +1,5 @@
-uuid: 991fcd8c-613d-49b6-aeea-b9ca509186f3
-langcode: nl
+uuid: 440a6277-da1f-4997-becb-7fffff5e3b84
+langcode: en
 status: false
 dependencies:
   enforced:
@@ -10,6 +10,6 @@ dependencies:
 _core:
   default_config_hash: ERjobPGdPFAM9p5cmQIcJzk-0cY-1mE1OV_pKmMlJaE
 id: node.print
-label: Afdrukken
+label: Print
 targetEntityType: node
 cache: true

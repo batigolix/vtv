@@ -1,4 +1,4 @@
-uuid: 3d0b630a-e5ef-462f-9c3c-e9aad86ab0f7
+uuid: f1d29349-5e30-4e0f-8a63-bd38e3d69b20
 langcode: en
 status: true
 dependencies:
@@ -9,7 +9,7 @@ _core:
 id: earthen_local_tasks
 theme: earthen
 region: content
-weight: -2
+weight: -6
 provider: null
 plugin: local_tasks_block
 settings:

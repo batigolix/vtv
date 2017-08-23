@@ -1,5 +1,5 @@
-uuid: 6d157547-42c3-401a-9fd5-ed2e70411944
-langcode: nl
+uuid: e1fcb923-0e9d-4b67-81cb-fc1905761be2
+langcode: en
 status: true
 dependencies:
   config:
@@ -10,7 +10,7 @@ dependencies:
     - text
     - user
 _core:
-  default_config_hash: 8NARVQ-lU87ljX8WBrVPdmrTPMCjlkG3-7hoVWlkAFs
+  default_config_hash: krIbNOdqw4vMF3Ty8qAW6AxgxmdBig5XuQRBW8-HYCU
 id: node.book.teaser
 targetEntityType: node
 bundle: book
@@ -20,10 +20,11 @@ content:
     label: hidden
     type: text_summary_or_trimmed
     weight: 100
+    region: content
     settings:
       trim_length: 600
     third_party_settings: {  }
   links:
     weight: 101
-hidden:
-  langcode: true
+    region: content
+hidden: {  }

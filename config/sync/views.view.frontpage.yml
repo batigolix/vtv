@@ -1,5 +1,5 @@
-uuid: 0b57d2aa-40ff-41a6-a6b4-b1c6fed085e9
-langcode: nl
+uuid: c9ee2be4-736a-4e2d-bbb4-cc8ca040cce7
+langcode: en
 status: true
 dependencies:
   config:
@@ -11,9 +11,9 @@ dependencies:
 _core:
   default_config_hash: GNfx9kN8-0_KgQ-xf3fjdXCCzZwXCI8T0IPFW8SIe7g
 id: frontpage
-label: Voorpagina
+label: Frontpage
 module: node
-description: 'Alle inhoud die wordt aangeraden op de voorpagina.'
+description: 'All content promoted to the front page.'
 tag: default
 base_table: node_field_data
 base_field: nid
@@ -31,7 +31,7 @@ display:
       empty:
         area_text_custom:
           admin_label: ''
-          content: 'Er is nog geen inhoud voor de voorpagina aangemaakt.'
+          content: 'No front page content has been created yet.'
           empty: true
           field: area_text_custom
           group_type: group
@@ -61,18 +61,18 @@ display:
           admin_label: ''
           label: ''
           empty: true
-          title: 'Welkom op [site:name]'
+          title: 'Welcome to [site:name]'
           plugin_id: title
       exposed_form:
         type: basic
         options:
-          submit_button: Toepassen
+          submit_button: Apply
           reset_button: false
           reset_button_label: Reset
-          exposed_sorts_label: 'Sorteren op'
+          exposed_sorts_label: 'Sort by'
           expose_sort_order: true
-          sort_asc_label: Oplopend
-          sort_desc_label: Aflopend
+          sort_asc_label: Asc
+          sort_desc_label: Desc
       filters:
         promote:
           admin_label: ''
@@ -172,17 +172,17 @@ display:
           total_pages: 0
           expose:
             items_per_page: false
-            items_per_page_label: 'Items per pagina'
+            items_per_page_label: 'Items per page'
             items_per_page_options: '5, 10, 25, 50'
             items_per_page_options_all: false
-            items_per_page_options_all_label: '- Alle -'
+            items_per_page_options_all_label: '- All -'
             offset: false
-            offset_label: Startpunt
+            offset_label: Offset
           tags:
-            previous: '‹ Vorige'
-            next: 'Volgende ›'
-            first: '« Eerste'
-            last: 'Laatste »'
+            previous: '‹ Previous'
+            next: 'Next ›'
+            first: '« First'
+            last: 'Last »'
           quantity: 9
       query:
         type: views_query
@@ -241,7 +241,7 @@ display:
       arguments: {  }
       display_extenders: {  }
     display_plugin: default
-    display_title: Hoofd
+    display_title: Master
     id: default
     position: 0
     cache_metadata:
@@ -292,7 +292,7 @@ display:
       path: node
       display_extenders: {  }
     display_plugin: page
-    display_title: Pagina
+    display_title: Page
     id: page_1
     position: 1
     cache_metadata:

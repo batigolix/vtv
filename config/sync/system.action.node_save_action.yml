@@ -1,5 +1,5 @@
-uuid: c68c9c25-6ba8-44e5-b6b4-3b74edf42396
-langcode: nl
+uuid: 239097cc-8a8f-4ea1-a1ce-6fdb638a291c
+langcode: en
 status: true
 dependencies:
   module:
@@ -7,7 +7,7 @@ dependencies:
 _core:
   default_config_hash: U9HspszLxcw6pZmRacFa6yDbbheyMN-We4fPbrWWHGg
 id: node_save_action
-label: 'Inhoud opslaan'
+label: 'Save content'
 type: node
 plugin: node_save_action
 configuration: {  }

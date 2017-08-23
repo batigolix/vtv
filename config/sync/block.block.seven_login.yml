@@ -1,5 +1,5 @@
-uuid: 672461e4-2a7c-46d3-ba30-6767076e05bd
-langcode: nl
+uuid: 2728c2cb-b547-433c-b8ef-12dfa1647f7a
+langcode: en
 status: true
 dependencies:
   module:
@@ -16,7 +16,7 @@ provider: null
 plugin: user_login_block
 settings:
   id: user_login_block
-  label: Gebruikerslogin
+  label: 'User login'
   provider: user
   label_display: visible
 visibility: {  }

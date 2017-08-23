@@ -1,4 +1,4 @@
-uuid: 7110b0b3-cb35-403e-90b1-dc5a7e6a6bdc
+uuid: 60fcd755-c635-42f4-b681-a81ced125173
 langcode: en
 status: true
 dependencies:
@@ -11,7 +11,7 @@ _core:
 id: earthen_branding
 theme: earthen
 region: header
-weight: -6
+weight: -5
 provider: null
 plugin: system_branding_block
 settings:

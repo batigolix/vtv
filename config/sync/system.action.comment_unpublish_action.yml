@@ -1,5 +1,5 @@
-uuid: b7e18bb1-1a7d-413b-8342-e4a49441ec26
-langcode: nl
+uuid: cd67317b-a508-4006-be38-cf9920651405
+langcode: en
 status: true
 dependencies:
   module:
@@ -7,7 +7,7 @@ dependencies:
 _core:
   default_config_hash: MLin6S_PsJ7Oo480DxS46D46IM8tqFkkWOLyH7TGByI
 id: comment_unpublish_action
-label: 'Reactie intrekken'
+label: 'Unpublish comment'
 type: comment
 plugin: comment_unpublish_action
 configuration: {  }

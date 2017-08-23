@@ -1,4 +1,4 @@
-uuid: 43b7600c-81cb-453f-a672-d47b3367b333
+uuid: 487acc8d-0979-4e54-83e9-229d7cba9572
 langcode: en
 status: true
 dependencies:
@@ -9,7 +9,7 @@ _core:
 id: earthen_page_title
 theme: earthen
 region: content
-weight: -3
+weight: -6
 provider: null
 plugin: page_title_block
 settings:

@@ -1,5 +1,5 @@
-uuid: b5dae29f-d80f-4a8c-a567-1e49b39e5458
-langcode: nl
+uuid: d2f62651-aae3-4c70-adce-5cd5aa83f1d4
+langcode: en
 status: true
 dependencies:
   config:
@@ -9,7 +9,7 @@ dependencies:
     - text
     - user
 _core:
-  default_config_hash: 7UKHHzhlAE0hzKaKG_KHqUXXOp85mAQ1nZTOep8quTc
+  default_config_hash: UWTnZUj-u-jp8I_S1C1nUCTlM5iIV2QKdxm37ehFjoI
 id: node.book.default
 targetEntityType: node
 bundle: book
@@ -19,9 +19,10 @@ content:
     label: hidden
     type: text_default
     weight: 100
+    region: content
     settings: {  }
     third_party_settings: {  }
   links:
     weight: 101
-hidden:
-  langcode: true
+    region: content
+hidden: {  }

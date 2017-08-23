@@ -1,4 +1,4 @@
-uuid: eb8c162a-779c-4f80-9cb4-fdb351d0bbcd
+uuid: 4676f4f3-a7ee-418c-af48-1022b03431b4
 langcode: en
 status: true
 dependencies:
@@ -9,13 +9,13 @@ dependencies:
 id: booknavigation
 theme: earthen
 region: sidebar_second
-weight: -5
+weight: -6
 provider: null
 plugin: book_navigation
 settings:
   id: book_navigation
-  label: Inhoud
+  label: 'Book navigation'
   provider: book
-  label_display: visible
+  label_display: '0'
   block_mode: 'all pages'
 visibility: {  }

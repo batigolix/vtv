@@ -1,5 +1,5 @@
-uuid: 25b2fb25-799e-4d89-bf3f-df5b7e337f72
-langcode: nl
+uuid: f37ec5d1-6806-42a4-82f8-31b3af4579b1
+langcode: en
 status: true
 dependencies:
   module:
@@ -7,7 +7,7 @@ dependencies:
 _core:
   default_config_hash: JBptjnfuOMtsdKygklXxoOgeOCTMtQxlkymjnnj-cC0
 id: node_unpromote_action
-label: 'Inhoud van de voorpagina verwijderen'
+label: 'Remove content from front page'
 type: node
 plugin: node_unpromote_action
 configuration: {  }

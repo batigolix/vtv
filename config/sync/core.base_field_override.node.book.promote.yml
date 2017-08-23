@@ -1,5 +1,5 @@
-uuid: 2dcf2465-2f65-496c-875b-29751d1e24e7
-langcode: nl
+uuid: 8f3d0bdd-ed75-41f0-a78a-c921db6c44c2
+langcode: en
 status: true
 dependencies:
   config:
@@ -10,7 +10,7 @@ id: node.book.promote
 field_name: promote
 entity_type: node
 bundle: book
-label: 'Aangeraden op de voorpagina'
+label: 'Promoted to front page'
 description: ''
 required: false
 translatable: true
@@ -19,6 +19,6 @@ default_value:
     value: 0
 default_value_callback: ''
 settings:
-  on_label: Aan
-  off_label: Uit
+  on_label: 'On'
+  off_label: 'Off'
 field_type: boolean

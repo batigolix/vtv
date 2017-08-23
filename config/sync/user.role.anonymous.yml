@@ -1,16 +1,16 @@
-uuid: a2e26f17-fd87-43f7-94d0-550143d338cb
-langcode: nl
+uuid: 86555275-2c3b-4ff3-8410-f86d7ee893be
+langcode: en
 status: true
 dependencies: {  }
 _core:
   default_config_hash: j5zLMOdJBqC0bMvSdth5UebkprJB8g_2FXHqhfpJzow
 id: anonymous
-label: 'Anonieme gebruiker'
+label: 'Anonymous user'
 weight: 0
 is_admin: false
 permissions:
-  - 'access content'
-  - 'use text format restricted_html'
   - 'access comments'
+  - 'access content'
   - 'access site-wide contact form'
   - 'search content'
+  - 'use text format restricted_html'
