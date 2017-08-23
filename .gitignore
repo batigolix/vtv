@@ -6,6 +6,8 @@ web/modules/contrib
 web/themes/contrib
 web/profiles/contrib
 
+*.css.map
+
 # Drupal's file directory
 web/sites/*/files
 web/sites/*/settings.local.php
