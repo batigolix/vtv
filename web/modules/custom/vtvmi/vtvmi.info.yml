@@ -7,5 +7,4 @@ dependencies:
   - migrate_plus
   - migrate_tools
 config_devel:
-  optional:
-    - migrate_plus.migration.vtvmi_books
+  - migrate_plus.migration.vtvmi_books
