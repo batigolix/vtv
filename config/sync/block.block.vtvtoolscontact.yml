@@ -9,7 +9,7 @@ dependencies:
 id: vtvtoolscontact
 theme: earthen
 region: footer
-weight: -5
+weight: -6
 provider: null
 plugin: contact
 settings:
@@ -21,6 +21,9 @@ settings:
   cache:
     max_age: 3600
     contexts:
+      - cache_context.user.roles
+      - cache_context.user.roles
+      - cache_context.user.roles
       - cache_context.user.roles
       - cache_context.user.roles
       - cache_context.user.roles
