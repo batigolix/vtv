@@ -6,3 +6,11 @@ vtvmi.add_books_controller_build:
     _title: 'Add books controller'
   requirements:
     _permission: 'access content'
+
+vtvmi.import_menu_controller_import_menu:
+  path: '/vtvmi/import_menu'
+  defaults:
+    _controller: '\Drupal\vtvmi\Controller\ImportMenuController::import_menu'
+    _title: 'Import menu controller'
+  requirements:
+    _permission: 'access content'
